@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    a.btn.btn-warning(href="/puntos") Volver
+    br
+    h1 Nuevo Punto
+    br
+    form(action="/puntos/store", method="post")
+            label(for='id') ID:
+            input(type='number' name='id')
+            br
+            label(for='name') Name:
+            input(type='text' name='name')
+            br
+            label(for='lat') Lat:
+            input(type='number' name='lat')
+            br
+            label(for='lon') Lon:
+            input(type='number' name='lon')
+            br
+            button.btn.btn-success(type="submit") guardar

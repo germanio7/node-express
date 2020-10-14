@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+    br
+    a.btn.btn-success(href="/puntos/create") Crear
+    br
+    table.table
+        thead
+            tr
+                th(scope='col') #
+                th(scope='col') name
+                th(scope='col') lat
+                th(scope='col') lon
+                th(scope='col')
+                th(scope='col')
+        tbody
+            each punto in puntos
+                tr
+                    th(scope='row')= punto.id
+                    td= punto.name
+                    td= punto.lat
+                    td= punto.lon
+                    td
+                        a.btn.btn-info(href='/puntos/'+punto.id+'/edit') editar
+                    td
+                        form(action='/puntos/'+punto.id+'/delete', method="post")
+                            input(type="hidden", name="id" value= punto.id)
+                            button.btn.btn-danger(type="submit" onclick="return confirm('¿Desea eliminar el punto de interés?')") eliminar
