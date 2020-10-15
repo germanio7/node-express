@@ -31,8 +31,14 @@ Punto.removeById = function (id) {
 
 var a = new Punto(1, "plaza", -27.5768434, -60.7113742);
 var b = new Punto(2, "museo", -27.5786399, -60.7092994);
+var c = new Punto(3, "municipalidad", -27.576213, -60.71163);
+var d = new Punto(4, "hospital", -27.586504, -60.714289);
+var e = new Punto(5, "secretaria de cultura", -27.577723, -60.710882);
 
 Punto.add(a);
 Punto.add(b);
+Punto.add(c);
+Punto.add(d);
+Punto.add(e);
 
 module.exports = Punto;
